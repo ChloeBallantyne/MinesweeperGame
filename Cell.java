@@ -32,4 +32,16 @@ public class Cell {
     public void setAdjacentMines(int adjacentMines) {
         this.adjacentMines = adjacentMines;
     }
+
+    public char getDisplayChar() {
+        if (revealed) {
+            if (mine) {
+                return '*';
+            } else {
+                return (char) (adjacentMines + '0');
+            }
+        } else {
+            return '-';
+        }
+    }
 }
