@@ -1,9 +1,7 @@
 public class Main {
-    public Grid grid = new Grid();
-
-    public void main() {
-        grid.print();
-
+    public static void main(String[] args) {
+        GamePlay game = new GamePlay();
+        game.play();
     }
 
 }
