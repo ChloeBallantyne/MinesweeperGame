@@ -1,23 +1,31 @@
-# Minesweeper Console Game
+# Minesweeper Game
 
-This is a simplified version of the classic Minesweeper game designed to be played in the Java console.
+## Overview
+The Minesweeper Game is a classic single-player puzzle game where the player must clear a rectangular board containing hidden mines without detonating any of them. The player wins the game by revealing all the cells on the board that do not contain mines.
 
-## Description
-The game randomly generates a grid of 10x10 cells, where 10 of these cells contain mines. The player's objective is to reveal all non-mine cells without triggering any mines. Each non-mine cell displays a number indicating the number of adjacent mines. The game ends when the player reveals a mine or successfully reveals all non-mine cells.
+## Project Structure
 
-## How to Play
-1. Run the `Main` class to start the game.
-2. Enter row and column coordinates separated by a space to reveal a cell.
-3. If the revealed cell contains a mine, the game ends with a "Boom! Game over." message.
-4. If all non-mine cells are revealed, the game ends with a "Congratulations! You win." message.
+### 1. `Cell.java`
+- The `Cell` class represents an individual cell on the Minesweeper grid. It contains attributes such as whether the cell contains a mine, whether it has been revealed, and the number of adjacent mines.
 
-## Classes
-- `Grid`: Represents the game grid and contains methods for initializing the grid and printing it to the console.
-- `Cell`: Represents an individual cell in the grid and stores information about whether it contains a mine, whether it has been revealed, and the number of adjacent mines.
-- `GamePlay`: Manages the game logic, including mine placement, calculating adjacent mines, player input, and game state.
+### 2. `Grid.java`
+- The `Grid` class represents the Minesweeper grid, which consists of multiple cells. It initializes the grid, provides access to individual cells, and prints the grid with cell contents.
 
-## Usage
-- Java 8 or higher is required to run the game.
-- Simply compile and run the `Main` class to start playing the game in the console.
+### 3. `GamePlay.java`
+- The `GamePlay` class handles the game logic, including setting up the grid, placing mines, calculating adjacent mines, and executing player moves.
 
+### 4. `Main.java`
+- The `Main` class contains the `main` method and serves as the entry point for the Minesweeper game. It creates an instance of `GamePlay` and starts the game.
 
+## Functionality
+- The game initializes a grid with a size of 10x10 cells.
+- It randomly places 10 mines on the grid.
+- It calculates the number of adjacent mines for each cell.
+- Players can reveal cells by entering row and column coordinates.
+- If a revealed cell contains a mine, the game ends, and the player loses.
+- If all non-mine cells are revealed, the player wins the game.
+
+## Getting Started
+1. Compile all Java files in the project.
+2. Run the `Main` class, which will start the Minesweeper game.
+3. Follow the prompts to reveal cells and play the game.
