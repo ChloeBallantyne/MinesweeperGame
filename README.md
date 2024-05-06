@@ -14,7 +14,7 @@ The game randomly generates a grid of 10x10 cells, where 10 of these cells conta
 ## Classes
 - `Grid`: Represents the game grid and contains methods for initializing the grid and printing it to the console.
 - `Cell`: Represents an individual cell in the grid and stores information about whether it contains a mine, whether it has been revealed, and the number of adjacent mines.
-- `MinesweeperGame`: Manages the game logic, including mine placement, calculating adjacent mines, player input, and game state.
+- `GamePlay`: Manages the game logic, including mine placement, calculating adjacent mines, player input, and game state.
 
 ## Usage
 - Java 8 or higher is required to run the game.
